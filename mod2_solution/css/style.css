@@ -1,0 +1,123 @@
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica;
+}
+
+h1 {
+    text-align: center;
+    padding: 10% 0;
+}
+
+.container {
+    float: left;
+}
+
+.area, .block {
+    border: 1px solid #000;
+}
+
+#area1 {
+    background-color: #7cd2d6;
+}
+
+#area2 {
+    background-color: #83eb4b;
+}
+
+#area3 {
+    background-color: #dd98fa;
+}
+
+#block1 {
+    background-color: #FFF5EE;
+}
+
+#block2 {
+    background-color: #DB7093;
+}
+
+#block3 {
+    background-color: #B0E0E6;
+}
+
+@media (min-width: 992px) {
+    
+    .area {
+        width: 30%;
+        float: left;
+        margin-left: 2%;
+    }
+    
+    .block { 
+        float: right;
+        padding: 2% 5%;
+    }
+    
+    .text {
+        padding: 5%;
+        clear: right;
+        border: 2px solid #fff;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    
+    .area {
+        float: left;
+        width: 40%;
+        margin-left: 7%;
+    }
+    
+    #area3 {
+        width: 87%;
+        clear: left;
+        margin-top: 3%;
+    }
+    
+    .block {
+        text-align: center;
+        float: right;
+        padding: 2% 5%;
+    }
+    
+    .text {
+        padding: 5%;
+        clear: right;
+        border: 2px solid #fff;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+    .container {
+        padding: 0 2%;
+    }
+
+    .area {
+        width: 100%;
+        float: left;
+    }
+
+    #area2 {
+        clear: both;
+        margin-top: 2%;
+    }
+
+    #area3 {
+        clear: both;
+        margin-top: 2%;
+    }
+
+    .block {
+        float: right;
+        padding: 2% 5%;
+    }
+
+    .text {
+        padding: 5%;
+        clear: right;
+        border: 2px solid #fff;
+    }
+}
