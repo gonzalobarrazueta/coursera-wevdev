@@ -1,53 +1,152 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <title>Bootstrap Starter Page</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  </head>
 <body>
-    <h1>Our Menu</h1>
 
+  <nav id="header-nav" class="navbar navbar-default">
     <div class="container">
+     
+      <div class="navbar-header">
         
-        <div class="area" id="area1">
-                            
-            <div class="block" id="block1">
-                <p>Chicken</p>
-            </div>
+        <!-- LOGO 
+          class = "pull-left" = float: left;
+          visible-[xs, sm, md, lg] makes the element visible only in the breakpoint that was specified
+        -->
 
-            <div class="text">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo natus tempora ullam. Facilis itaque sint, modi quidem excepturi illum expedita enim consectetur temporibus illo quibusdam? Reprehenderit alias dignissimos praesentium in.</p>
-            </div>
+        <div class="navbar-brand pull-left">
 
-        </div>
-
-        <div class="area" id="area2">
-           
-            <div class="block" id="block2">
-                <p>Beef</p>
-            </div>
-
-            <div class="text">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo natus tempora ullam. Facilis itaque sint, modi quidem excepturi illum expedita enim consectetur temporibus illo quibusdam? Reprehenderit alias dignissimos praesentium in.</p>
-            </div>
+          <a href="index.html"><h1>Food LLC</h1></a>
 
         </div>
 
-        <div class="area" id="area3">
-            
-            <div class="block" id="block3">
-                <p>Sushi</p>
-            </div>
+        <button type="buttton" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
 
-            <div class="text">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo natus tempora ullam. Facilis itaque sint, modi quidem excepturi illum expedita enim consectetur temporibus illo quibusdam? Reprehenderit alias dignissimos praesentium in.</p>
-            </div>
+          <span class="sr-only">Toggle Navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
 
-        </div>
+        </button>
 
+      </div>
+
+      <div id="collapsable-nav" class="collapse navbar-collapse">
+        <ul id="nav-list" class="nav navbar-nav navbar-right visible-xs text-center">
+         <li>
+           <a href="menu-categories.html">
+             Chicken
+            </a>
+         </li>
+         <li>
+           <a href="#">
+             Beef
+           </a>
+         </li>
+         <li>
+            <a href="#">
+             Sushi
+            </a>         
+         </li>
+       </ul><!-- #nav-list -->
+     </div>    
     </div>
+  </nav>
+  
+  <div id="main-content" class="container">
+    
+    <h1 class="text-center">Menu</h1>
+  
+  <!--
+    <div class="jumbotron">
+      <img src="https://restaurante.wncs.com.mx/wp-content/uploads/2019/04/restaurant-2.jpg" alt="Picture of restaurant" class="img-responsive">
+    </div>
+  -->
+
+    <div id="home-tiles" class="row">
+        
+      <div id="chicken-col" class="col-md-12 col-sm-12 col-xs-12">
+       
+        <div id="chicken-info">
+
+          <h2 class="text-center">Chicken</h2>
+
+          <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non bibendum orci. Vivamus faucibus ligula nec ante fringilla, sit amet pretium quam auctor. Pellentesque et ornare libero. Nam quis risus turpis. In hac habitasse platea dictumst. Nulla tristique ornare enim, vitae mattis elit sagittis eget. Morbi ut nisl rutrum, sagittis sem ac, blandit mi. Quisque non libero nec nibh maximus mattis. Nullam sed aliquam quam. Nunc ut vulputate nulla, quis pellentesque arcu. Vivamus tellus risus, tempor nec nisl quis, fermentum sodales sapien.
+
+            Etiam viverra eu metus ac vehicula. Maecenas vitae velit neque. Nulla a porta tellus, a ultricies nisi. Cras id malesuada metus. Pellentesque venenatis, felis vitae gravida hendrerit, purus ante accumsan turpis, sit amet porta sem mi tempus metus. Aenean tempus purus at purus tristique, quis sodales arcu ultrices. Duis suscipit auctor purus in ullamcorper. Mauris congue commodo enim quis congue. Sed ut scelerisque dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in massa gravida, tincidunt velit nec, ornare velit. Nulla non lectus faucibus, pretium turpis at, aliquam erat. Donec id pellentesque libero.
+            
+            Cras tincidunt orci sed sem hendrerit, eu viverra risus pellentesque. Nulla sit amet nunc neque. Mauris vel pharetra turpis, sodales tincidunt ex. Vivamus id ante mi. Praesent sit amet efficitur erat, ut pellentesque eros. Donec nec euismod dui, vitae porttitor ex. Sed at tellus vitae ipsum blandit dignissim. Quisque sodales eget magna id tempor. Nulla congue pulvinar viverra. Donec in aliquet metus. Sed tellus tortor, tincidunt vel consequat id, mollis non nisi. Duis tincidunt eros id dolor gravida, ut interdum orci sollicitudin. Aliquam luctus non diam porta semper.
+            
+            Suspendisse fringilla lacus tortor, vel molestie mauris viverra quis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin gravida posuere quam id blandit. Quisque vulputate, mauris et vehicula pulvinar, ante quam posuere orci, non porta ex tortor et metus. Aliquam ullamcorper ligula non erat pharetra, vel porta diam iaculis. Curabitur sit amet lacus a arcu vestibulum ornare. Nam dolor mauris, fringilla sit amet nunc sed, pellentesque feugiat leo. Sed fringilla eleifend commodo. Praesent feugiat consectetur aliquam.
+            
+            Nunc elementum eros vel semper ullamcorper. In malesuada porttitor dui sit amet sollicitudin. Quisque ultricies ullamcorper turpis sit amet venenatis. Fusce id tincidunt leo. Ut luctus non est eu varius. Praesent eleifend odio quam. Integer eget dui sem.
+          </p>
+
+          <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non bibendum orci. Vivamus faucibus ligula nec ante fringilla, sit amet pretium quam auctor. Pellentesque et ornare libero. Nam quis risus turpis. In hac habitasse platea dictumst. Nulla tristique ornare enim, vitae mattis elit sagittis eget. Morbi ut nisl rutrum, sagittis sem ac, blandit mi. Quisque non libero nec nibh maximus mattis. Nullam sed aliquam quam. Nunc ut vulputate nulla, quis pellentesque arcu. Vivamus tellus risus, tempor nec nisl quis, fermentum sodales sapien.
+
+            Etiam viverra eu metus ac vehicula. Maecenas vitae velit neque. Nulla a porta tellus, a ultricies nisi. Cras id malesuada metus. Pellentesque venenatis, felis vitae gravida hendrerit, purus ante accumsan turpis, sit amet porta sem mi tempus metus. Aenean tempus purus at purus tristique, quis sodales arcu ultrices. Duis suscipit auctor purus in ullamcorper. Mauris congue commodo enim quis congue. Sed ut scelerisque dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in massa gravida, tincidunt velit nec, ornare velit. Nulla non lectus faucibus, pretium turpis at, aliquam erat. Donec id pellentesque libero.
+            
+            Cras tincidunt orci sed sem hendrerit, eu viverra risus pellentesque. Nulla sit amet nunc neque. Mauris vel pharetra turpis, sodales tincidunt ex. Vivamus id ante mi. Praesent sit amet efficitur erat, ut pellentesque eros. Donec nec euismod dui, vitae porttitor ex. Sed at tellus vitae ipsum blandit dignissim. Quisque sodales eget magna id tempor. Nulla congue pulvinar viverra. Donec in aliquet metus. Sed tellus tortor, tincidunt vel consequat id, mollis non nisi. Duis tincidunt eros id dolor gravida, ut interdum orci sollicitudin. Aliquam luctus non diam porta semper.
+            
+            Suspendisse fringilla lacus tortor, vel molestie mauris viverra quis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin gravida posuere quam id blandit. Quisque vulputate, mauris et vehicula pulvinar, ante quam posuere orci, non porta ex tortor et metus. Aliquam ullamcorper ligula non erat pharetra, vel porta diam iaculis. Curabitur sit amet lacus a arcu vestibulum ornare. Nam dolor mauris, fringilla sit amet nunc sed, pellentesque feugiat leo. Sed fringilla eleifend commodo. Praesent feugiat consectetur aliquam.
+            
+            Nunc elementum eros vel semper ullamcorper. In malesuada porttitor dui sit amet sollicitudin. Quisque ultricies ullamcorper turpis sit amet venenatis. Fusce id tincidunt leo. Ut luctus non est eu varius. Praesent eleifend odio quam. Integer eget dui sem.
+          </p>
+
+          <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non bibendum orci. Vivamus faucibus ligula nec ante fringilla, sit amet pretium quam auctor. Pellentesque et ornare libero. Nam quis risus turpis. In hac habitasse platea dictumst. Nulla tristique ornare enim, vitae mattis elit sagittis eget. Morbi ut nisl rutrum, sagittis sem ac, blandit mi. Quisque non libero nec nibh maximus mattis. Nullam sed aliquam quam. Nunc ut vulputate nulla, quis pellentesque arcu. Vivamus tellus risus, tempor nec nisl quis, fermentum sodales sapien.
+
+            Etiam viverra eu metus ac vehicula. Maecenas vitae velit neque. Nulla a porta tellus, a ultricies nisi. Cras id malesuada metus. Pellentesque venenatis, felis vitae gravida hendrerit, purus ante accumsan turpis, sit amet porta sem mi tempus metus. Aenean tempus purus at purus tristique, quis sodales arcu ultrices. Duis suscipit auctor purus in ullamcorper. Mauris congue commodo enim quis congue. Sed ut scelerisque dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in massa gravida, tincidunt velit nec, ornare velit. Nulla non lectus faucibus, pretium turpis at, aliquam erat. Donec id pellentesque libero.
+            
+            Cras tincidunt orci sed sem hendrerit, eu viverra risus pellentesque. Nulla sit amet nunc neque. Mauris vel pharetra turpis, sodales tincidunt ex. Vivamus id ante mi. Praesent sit amet efficitur erat, ut pellentesque eros. Donec nec euismod dui, vitae porttitor ex. Sed at tellus vitae ipsum blandit dignissim. Quisque sodales eget magna id tempor. Nulla congue pulvinar viverra. Donec in aliquet metus. Sed tellus tortor, tincidunt vel consequat id, mollis non nisi. Duis tincidunt eros id dolor gravida, ut interdum orci sollicitudin. Aliquam luctus non diam porta semper.
+            
+            Suspendisse fringilla lacus tortor, vel molestie mauris viverra quis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin gravida posuere quam id blandit. Quisque vulputate, mauris et vehicula pulvinar, ante quam posuere orci, non porta ex tortor et metus. Aliquam ullamcorper ligula non erat pharetra, vel porta diam iaculis. Curabitur sit amet lacus a arcu vestibulum ornare. Nam dolor mauris, fringilla sit amet nunc sed, pellentesque feugiat leo. Sed fringilla eleifend commodo. Praesent feugiat consectetur aliquam.
+            
+            Nunc elementum eros vel semper ullamcorper. In malesuada porttitor dui sit amet sollicitudin. Quisque ultricies ullamcorper turpis sit amet venenatis. Fusce id tincidunt leo. Ut luctus non est eu varius. Praesent eleifend odio quam. Integer eget dui sem.
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!--
+    <div class="row" id="home-tiles">
+      <div class="col-md-12">
+        hello
+      </div>
+
+      <div class="col-md-6">
+        hello
+      </div>
+
+      <div class="col-md-6">
+        hello
+      </div>
+    </div>
+    -->
+
+  </div>
+
+
+  <!-- jQuery (Bootstrap JS plugins depend on it) -->
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
